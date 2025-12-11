@@ -1,9 +1,9 @@
-//================================================================
+//===================================================================
 // main.cpp
 // Author: Jody Spikes, Hailey Pieper, Ian Dudley
 // Title: Pixel Racers - Main Game Loop
-// Description: Entry point coordinating game state and rendering
-//================================================================
+// Description: Main game loop handling input, updates, and rendering
+//===================================================================
 
 #include <iostream>
 #include <vector>
@@ -21,41 +21,6 @@
 
 using namespace std;
 
-/*
- * Description: Main game loop for Pixel Racers
- * Return: int - 0 on successful exit
- * Pre-condition: Valid command line arguments
- * Post-condition: Game completed, SDL_Plotter cleaned up
- */
-//================================================================
-// main.cpp
-// Author: Jody Spikes, Hailey Pieper, Ian Dudley
-// Title: Pixel Racers - Main Game Loop
-// Description: Entry point coordinating game state and rendering
-//================================================================
-
-#include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <cctype>
-#include <string>
-#include "SDL_Plotter.h"
-#include "Car.h"
-#include "Background.h"
-#include "Collision.h"
-#include "Screen.h"
-#include "Points.h"
-#include "Const.h"
-
-using namespace std;
-
-/*
- * Description: Main game loop for Pixel Racers
- * Return: int - 0 on successful exit
- * Pre-condition: Valid command line arguments
- * Post-condition: Game completed, SDL_Plotter cleaned up
- */
 int main(int argc, char **argv) {
     // Initialize random seed
     srand((unsigned)time(0));
@@ -155,7 +120,7 @@ int main(int argc, char **argv) {
                         for (auto& ai : aiCars) ai.respawn();
                         for (auto& obs : obstacles) obs.respawn();
 
-                        gameState = STATE_PLAYING;
+                        gameState = STATE_START;
                     }
                     break;
             }
