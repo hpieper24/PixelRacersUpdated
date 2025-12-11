@@ -1,8 +1,9 @@
-//==================================================
+//=======================================================================
 // Font.cpp
-// OWNERSHIP: Jody Spikes, Hailey Pieper, Ian Dudley
-// PURPOSE: Pixel Font Rendering
-//==================================================
+// Author: Jody Spikes, Hailey Pieper, Ian Dudley
+// Title: Pixel Font Rendering Implementation
+// Description: FontRenderer class methods for large/small text rendering
+//=======================================================================
 
 #include "Font.h"
 #include <cctype>
@@ -587,3 +588,4 @@ void FontRenderer::drawSmall(SDL_Plotter& g, int x, int y, color c, const string
         }
     }
 }
+
